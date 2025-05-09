@@ -62,7 +62,10 @@ export function CharacterDrawer({ character, isOpen, onClose }: Props) {
             <p>
               <strong>Episodes:</strong> {character.episode.length}
             </p>
-            {character.episode.map((ep) => ep.id).join(", ")}
+            <p>
+              <strong>Episodes n°</strong>{" "}
+              {character.episode.map((ep) => ep.id).join(", ")}{" "}
+            </p>
           </div>
         </DrawerBody>
         <DrawerFooter>
