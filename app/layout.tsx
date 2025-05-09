@@ -8,6 +8,7 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import { ApolloWrapper } from "@/lib/apolloProvider";
+import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
   title: {
@@ -48,6 +49,7 @@ export default function RootLayout({
               <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow bg-cyan-400">
                 {children}
               </main>
+              <Footer />
             </div>
           </Providers>
         </ApolloWrapper>
