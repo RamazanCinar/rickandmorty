@@ -13,7 +13,9 @@ type Character = {
   gender: string;
   origin: { name: string };
   location: { name: string };
-  episode: { id: string }[];
+  episode: {
+    id: string;
+  }[];
 };
 
 type Props = {
@@ -43,7 +45,7 @@ export function CharacterList({ characters }: Props) {
           <li key={char.id}>
             <button
               onClick={() => handleSelectCharacter(char)}
-              className="w-full text-left flex gap-4 items-center border p-2 rounded hover:bg-gray-100 focus:outline-none"
+              className="w-full text-left text-purple-900 flex gap-4 items-center border border-purple-900 p-2 rounded hover:bg-lime-500 focus:outline-none"
             >
               <img
                 src={char.image}
@@ -52,7 +54,7 @@ export function CharacterList({ characters }: Props) {
               />
               <div>
                 <strong>{char.name}</strong>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-purple-700">
                   {char.status}, {char.species}, {char.gender}
                 </p>
               </div>

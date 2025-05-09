@@ -35,10 +35,11 @@ export function CharacterDrawer({ character, isOpen, onClose }: Props) {
       isOpen={isOpen}
       placement="right"
       onClose={onClose}
+      className="bg-purple-950"
     >
       <DrawerContent className="w-80">
         <DrawerHeader>
-          <h2 className="text-xl font-bold">{character.name}</h2>
+          <h2 className="text-xl font-bold text-lime-400">{character.name}</h2>
         </DrawerHeader>
         <DrawerBody>
           <img
@@ -48,10 +49,10 @@ export function CharacterDrawer({ character, isOpen, onClose }: Props) {
             src={character.image}
             width={50}
           />
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-lime-400">
             {character.status}, {character.species}, {character.gender}
           </p>
-          <div className="mt-4 space-y-2 text-sm text-gray-700">
+          <div className="mt-4 space-y-2 text-sm text-lime-400">
             <p>
               <strong>Origin:</strong> {character.origin.name}
             </p>
@@ -61,10 +62,13 @@ export function CharacterDrawer({ character, isOpen, onClose }: Props) {
             <p>
               <strong>Episodes:</strong> {character.episode.length}
             </p>
+            {character.episode.map((ep) => ep.id).join(", ")}
           </div>
         </DrawerBody>
         <DrawerFooter>
-          <Button onPress={onClose}>Close</Button>
+          <Button className="bg-red-500 text-white" onPress={onClose}>
+            Close
+          </Button>
         </DrawerFooter>
       </DrawerContent>
     </Drawer>

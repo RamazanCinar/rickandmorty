@@ -74,6 +74,9 @@ export default function Home() {
 
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+      <p className="lg:text-3xl font-bold text-purple-900 md:text-2xl text-center">
+        Welcome to the chaotic multiverse of Rick and Morty!
+      </p>
       <Input
         aria-label="Search a character..."
         className="mt-6 p-2 rounded w-80 text-center"
@@ -100,14 +103,14 @@ export default function Home() {
           <div className="flex flex-col items-center gap-2 mt-6">
             <div className="flex gap-2">
               <Button
-                className="px-3 py-1 rounded border bg-white text-gray-700 disabled:opacity-50"
+                className="px-3 py-1 rounded border bg-white text-gray-700 disabled:opacity-50 hover:bg-lime-500"
                 disabled={!data.characters.info.prev}
                 onPress={handlePrev}
               >
                 Previous
               </Button>
               <Button
-                className="px-3 py-1 rounded border bg-white text-gray-700 disabled:opacity-50"
+                className="px-3 py-1 rounded border bg-white text-gray-700 disabled:opacity-50 hover:bg-lime-500"
                 disabled={!data.characters.info.next}
                 onPress={handleNext}
               >

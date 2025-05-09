@@ -23,7 +23,7 @@ export function Pagination({
     <button
       key={1}
       onClick={() => onPageChange(1)}
-      className={`px-3 py-1 rounded border ${
+      className={`px-3 py-1 rounded border hover:bg-lime-500 ${
         currentPage === 1
           ? "bg-violet-500 text-white"
           : "bg-white text-gray-700"
@@ -42,7 +42,7 @@ export function Pagination({
       <button
         key={i}
         onClick={() => onPageChange(i)}
-        className={`px-3 py-1 rounded border ${
+        className={`px-3 py-1 rounded border hover:bg-lime-500 ${
           currentPage === i
             ? "bg-violet-500 text-white"
             : "bg-white text-gray-700"
@@ -62,7 +62,7 @@ export function Pagination({
       <button
         key={totalPages}
         onClick={() => onPageChange(totalPages)}
-        className={`px-3 py-1 rounded border ${
+        className={`px-3 py-1 rounded border hover:bg-lime-500 ${
           currentPage === totalPages
             ? "bg-violet-500 text-white"
             : "bg-white text-gray-700"
