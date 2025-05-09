@@ -1,6 +1,6 @@
 # Rick & Morty Explorer
 
-## Setyp Instructions
+## Setup Instructions
 1. **Clone the repo**  
    ```bash
    git clone git@github.com:RamazanCinar/rickandmorty.git && cd rickandmorty
